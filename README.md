@@ -80,7 +80,7 @@ The columns are
 - **turns**: The accumulated number of player moves, e.g. on level 1, Player A can make 6 different moves.
 - **level**: The level number
 - **games**: The accumulated number of finished games.
-- **agency**: The agency measure is the proportion of turns for which the player to move has more than one legal move (Bowie & Graven, 2024, p. 6).
+- **agency**: The agency measure is the proportion of turns for which the player to move has more than one legal move (Todd et al., 2025, p. 6).
 - **Awins**: The accumulated number of games won by Player A.
 - **Bwins**: The accumulated number of games won by Player B.
 - **draws**: The accumulated number of games that end in a draw.
@@ -94,5 +94,5 @@ python.exe main.py
 In this case, you can choose whether you want to play the game or analyse it. If you decide to analyse the game, you can select the depth you wish.
 
 ## References
-- Bowie, L. H., & Graven, M. H. (2024). Using games to develop number sense in early grade maths clubs. SAJCE, 14(1), 1-11. https://doi.org/10.4102/sajce.v14i1.1493
-- Tesfamicael, S. A., & Farsani, D. (2024). Creating a Culturally Responsive Mathematics Education: The Case of Gebeta Game in Ethiopia. In M. A. Ashraf & S. M. Tsegay (Eds.), STEM Education - Recent Trends and New Advances. IntechOpen. https://doi.org/10.5772/intechopen.114007
+- Todd, G., Padula, A. G., Stephenson, M., Piette, É., Soemers, D. J. N. J., & Togelius, J. (2025). *GAVEL: generating games via evolution and language models* [Conference Paper]. Proceedings of the 38th International Conference on Neural Information Processing Systems, Vancouver, BC, Canada. https://proceedings.neurips.cc/paper_files/paper/2024/file/c7b04e4e13bb77996d3ae2ff667231ac-Paper-Conference.pdf
+- Tesfamicael, S. A., & Farsani, D. (2024). Creating a Culturally Responsive Mathematics Education: The Case of Gebeta Game in Ethiopia. In M. A. Ashraf & S. M. Tsegay (Eds.), *STEM Education - Recent Trends and New Advances.* IntechOpen. https://doi.org/10.5772/intechopen.114007
