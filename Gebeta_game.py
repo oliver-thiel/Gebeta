@@ -170,6 +170,7 @@ class Gebeta_game:
         winner : str = self.moves[-1]  # Get the last character to determine the game outcome
         print(f"\033[1;31mThe winner is {winner}.\033[0m" if winner != "D" else "The game is a draw.")
 
+
 def play_game():
     """
     Two players can play Gebeta in the terminal until there is a winner or a draw.
@@ -188,3 +189,7 @@ def play_game():
         playing = game.move(pit)  # Make the move and check if the game continues
         if not playing:  # The game has ended, either with a winner or a draw
             game.print_end()  # Print the final board state and the winner
+
+
+if __name__ == "__main__":
+    play_game()
