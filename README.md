@@ -20,31 +20,31 @@ You can start the game in the terminal by calling
 python.exe Gebeta_game.py
 ```
 The program starts the game and shows:
-
+```diff
     Player A has 0 families.  
     Player B has 0 families.  
     Current board state:  
     B  |  4 |  4 |  4 |  4 |  4 |  4 |  
     A  |  4 |  4 |  4 |  4 |  4 |  4 |  
-    A  |  0 |  1 |  2 |  3 |  4 |  5 |  
+!   A  |  0 |  1 |  2 |  3 |  4 |  5 |  
     The following moves are made: S  
     The current player is A.  
     The next move is move number 1.  
     Player A's turn. Choose a home (0-5):  
-
+```
 It is Player A's turn to choose a home by entering a number between 0 and 5. After A has moved, e.g. by typing 0<ENTER>, it is Player B's move. The board is shown from B's perspective.
-
+```diff
     Player A has 0 families.  
     Player B has 0 families.  
     Current board state:  
     A  |  6 |  1 |  6 |  1 |  7 |  2 |  
     B  |  6 |  6 |  0 |  1 |  6 |  6 |  
-    B  |  5 |  4 |  3 |  2 |  1 |  0 |  
+!   B  |  5 |  4 |  3 |  2 |  1 |  0 |  
     The following moves are made: S0  
     The current player is B.  
     The next move is move number 2.  
     Player B's turn. Choose a home (0-5):  
-
+```
 ## Analysing the game
 You can analyse the Gebeta game tree down to a depth of 18 levels by calling
 ```
