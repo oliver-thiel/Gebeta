@@ -1,5 +1,9 @@
 # Gebeta
-Gebeta is a traditional board game played in Ethiopia (Tesfamicael & Farsani, 2024). The Python code in this repository allows two players to play Gebeta in the terminal. Furthermore, it includes code to analyse the Gebeta game tree.
+Gebeta is a traditional board game played in Ethiopia (Tesfamicael & Farsani, 2024)[^2]. It is used in the research project GEME (Gebeta Game in Early Mathematics Education). You can read about the project findings in Thiel (2025)[^3].  
+The Python code in this repository allows two players to play Gebeta in the terminal. Furthermore, it includes code to analyse the Gebeta game tree. The Ludeme will enable you to play Gebeta in the Ludii General Game System.
+
+## The Ludii code
+The `Gebeta.lud` file is a *ludeme* that can be used with the Ludii player, see https://ludii.games/download.php.
 
 ## The Python code
 The repository includes three Python files: Gebeta_game.py, Gebeta_analysis.py, and main.py.
@@ -14,7 +18,7 @@ The goal is to capture most families.
 
 When all of a player's homes are empty, the player must pass and the game ends. The opponent captures all remaining counters. The player with the most captured families wins the game.
 
-### Playing Gebeta
+### Playing Gebeta with the Python code
 You can start the game in the terminal by calling
 ```
 python.exe Gebeta_game.py
@@ -45,6 +49,10 @@ It is Player A's turn to choose a home by entering a number between 0 and 5. Aft
     The next move is move number 2.  
     Player B's turn. Choose a home (0-5):  
 ```
+
+### Playing Gebeta with the Ludii player
+You find instructions on how to download, install and use the Ludii player at https://ludiitutorials.readthedocs.io/en/latest/
+
 ## Analysing the game
 You can analyse the Gebeta game tree down to a depth of 18 levels by calling
 ```
@@ -80,7 +88,7 @@ The columns are
 - **turns**: The accumulated number of player moves, e.g. on level 1, Player A can make 6 different moves.
 - **level**: The level number
 - **games**: The accumulated number of finished games.
-- **agency**: The agency measure is the proportion of turns for which the player to move has more than one legal move (Todd et al., 2025, p. 6).
+- **agency**: The agency measure is the proportion of turns for which the player to move has more than one legal move (Todd et al., 2025, p. 6)[^1].
 - **Awins**: The accumulated number of games won by Player A.
 - **Bwins**: The accumulated number of games won by Player B.
 - **draws**: The accumulated number of games that end in a draw.
@@ -93,6 +101,9 @@ python.exe main.py
 ```
 In this case, you can choose whether you want to play the game or analyse it. If you decide to analyse the game, you can select the depth you wish.
 
-## References
-- Todd, G., Padula, A. G., Stephenson, M., Piette, É., Soemers, D. J. N. J., & Togelius, J. (2025). *GAVEL: generating games via evolution and language models* [Conference Paper]. Proceedings of the 38th International Conference on Neural Information Processing Systems, Vancouver, BC, Canada. https://proceedings.neurips.cc/paper_files/paper/2024/file/c7b04e4e13bb77996d3ae2ff667231ac-Paper-Conference.pdf
-- Tesfamicael, S. A., & Farsani, D. (2024). Creating a Culturally Responsive Mathematics Education: The Case of Gebeta Game in Ethiopia. In M. A. Ashraf & S. M. Tsegay (Eds.), *STEM Education - Recent Trends and New Advances.* IntechOpen. https://doi.org/10.5772/intechopen.114007
+[^1]: Todd, G., Padula, A. G., Stephenson, M., Piette, É., Soemers, D. J. N. J., & Togelius, J. (2025). *GAVEL: generating games via evolution and language models* [Conference Paper]. Proceedings of the 38th International Conference on Neural Information Processing Systems, Vancouver, BC, Canada. https://proceedings.neurips.cc/paper_files/paper/2024/file/c7b04e4e13bb77996d3ae2ff667231ac-Paper-Conference.pdf
+[^2]: Tesfamicael, S. A., & Farsani, D. (2024). Creating a Culturally Responsive Mathematics Education: The Case of Gebeta Game in Ethiopia. In M. A. Ashraf & S. M. Tsegay (Eds.), *STEM Education - Recent Trends and New Advances.* IntechOpen. https://doi.org/10.5772/intechopen.114007
+[^3]: Thiel, O. (2025). Playing Gebeta in Preschool: Informal Pathways to Early Numeracy Through Directionality and Bundling. *Education Sciences, 15*(10), 1365. https://doi.org/10.3390/educsci15101365  
+  Thiel, O. (2025). Spielerisch Basiskompetenz entwickeln : Das äthiopische Spiel Gebeta bietet viele Möglichkeiten [Develop basic skills through play : The Ethiopian game Gebeta offers many possibilities]. *Grundschule, 57*(4), 16-21.  
+  Thiel, O. (2025). Rechnen mit Gebeta : Ein äthiopisches Spiel für den Unterricht [Calculating with Gebeta : An Ethiopian game for the classroom]. Grundschule, 57(4), 28-33.  
+  Thiel, O., Nakken, A. H., & Tesfamicael, S. A. (2024, 7th-14th July). Affordances of Gebeta Game in Early Childhood Mathematics Education [Paper presentation]. 15th International Congress on Mathematics Education (ICME-15), Sydney, Australia. https://www.researchgate.net/publication/384597488_Affordances_of_Gebeta_Game_in_Early_Childhood_Mathematics_Education  
