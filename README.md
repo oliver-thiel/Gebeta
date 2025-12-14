@@ -1,8 +1,9 @@
 # Gebeta
-Gebeta is a traditional board game played in Ethiopia (Tesfamicael & Farsani, 2024). The Python code in this repository allows two players to play Gebeta in the terminal. Furthermore, it includes code to analyse the Gebeta game tree.
+Gebeta is a traditional board game played in Ethiopia (Tesfamicael & Farsani, 2024). The Python code in this repository allows two players to play Gebeta in the terminal or one player to play against the computer. Furthermore, it includes code to analyse the Gebeta game tree.
 
 ## The Python code
-The repository includes three Python files: Gebeta_game.py, Gebeta_analysis.py, and main.py.
+The repository includes four Python files: `Gebeta_MCTS.py`, `Gebeta_game.py`, `Gebeta_analysis.py`, and `main.py`.  
+The file `Gebeta_MCTS.py` requires [monte-carlo-tree-search 2.1.0 from PYPI](https://pypi.org/project/monte-carlo-tree-search/).
 
 ## Gebeta game
 ### Rules
@@ -12,38 +13,38 @@ Players pick up the counters from any of their homes and sow them in an anti-clo
 
 The goal is to capture most families.
 
-When all of a player's homes are empty, the player must pass and the game ends. The opponent captures all remaining counters. The player with the most captured families wins the game.
+When all of a player's homes are empty, the player must pass, and the game ends. The opponent captures all remaining counters. The player with the most captured families wins the game.
 
 ### Playing Gebeta
 You can start the game in the terminal by calling
 ```
-python.exe Gebeta_game.py
+python.exe Gebeta_MCTS.py
 ```
-The program starts the game and shows:
+The program asks for the players' names. If a player has the name `Computer, the computer will make the moves for this player by applying a Monte Carlo Tree Search (MCTS) algorithm. Then the game starts and shows:
 ```diff
     Player A has 0 families.  
     Player B has 0 families.  
     Current board state:  
     B  |  4 |  4 |  4 |  4 |  4 |  4 |  
     A  |  4 |  4 |  4 |  4 |  4 |  4 |  
-!   A  |  0 |  1 |  2 |  3 |  4 |  5 |  
-    The following moves are made: S  
+!   A  |  A |  B |  C |  D |  E |  F |  
+    The following moves are made: []  
     The current player is A.  
     The next move is move number 1.  
-    Player A's turn. Choose a home (0-5):  
+    Player A's turn. Choose a home (A-F):  
 ```
-It is Player A's turn to choose a home by entering a number between 0 and 5. After A has moved, e.g. by typing 0<ENTER>, it is Player B's move. The board is shown from B's perspective.
+It is Player A's turn to choose a home by entering a letter A, B, C, D, E, or F. After A has moved, e.g. by typing a<ENTER>, it is Player B's move. The board is shown from B's perspective.
 ```diff
     Player A has 0 families.  
     Player B has 0 families.  
     Current board state:  
     A  |  6 |  1 |  6 |  1 |  7 |  2 |  
     B  |  6 |  6 |  0 |  1 |  6 |  6 |  
-!   B  |  5 |  4 |  3 |  2 |  1 |  0 |  
-    The following moves are made: S0  
+!   B  |  F |  E |  D |  C |  B |  A |  
+    The following moves are made: ['A1']  
     The current player is B.  
     The next move is move number 2.  
-    Player B's turn. Choose a home (0-5):  
+    Player B's turn. Choose a home (A-F):  
 ```
 ## Analysing the game
 You can analyse the Gebeta game tree down to a depth of 18 levels by calling
