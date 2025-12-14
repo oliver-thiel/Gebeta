@@ -1,6 +1,4 @@
 #Gebeta game implementation
-import Gebeta_game
-import Gebeta_analysis
 
 def main():
     print("Do you want to play or analyze the Gebeta game?")
@@ -17,8 +15,10 @@ def main():
                 print("Invalid input. Please enter a valid integer.")
 
     if choice == 0:
-        Gebeta_game.play_game()
+        import Gebeta_MCTS
+        Gebeta_MCTS.play_game()
     else:
+        import Gebeta_analysis
         Gebeta_analysis.analyse_game_tree(choice)
 
 
